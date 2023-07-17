@@ -254,12 +254,6 @@
 }
 
 
-
-/* Remove show/movie image on details page */
-.layout-desktop .detailImageContainer {
-    display: none !important;
-}
-
 /* Re-position content on details page */
 .layout-desktop .detailSection {
     margin-right: 0 !important;
@@ -273,11 +267,6 @@
     right: 0 !important;
     left: 4% !important;
     top: 14vh !important;
-}
-
-/* Transparent ribbon bar */
-.detailRibbon {
-/*     background: transparent !important; */
 }
 
 /* Add card around top-right buttons */
