@@ -277,7 +277,7 @@
 
 /* Transparent ribbon bar */
 .detailRibbon {
-    background: transparent !important;
+/*     background: transparent !important; */
 }
 
 /* Add card around top-right buttons */
