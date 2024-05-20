@@ -1,3 +1,6 @@
+/*Font Awesome Light Icons*/
+@import url("https://cdn.jsdelivr.net/gh/prayag17/Jellyfin-Icons/Font%20Awesome/light.css");
+
 /* Increase size of Jellyfin logo */
 .layout-desktop .pageTitleWithLogo {
     margin-left: 15px !important;
@@ -14,9 +17,7 @@
     top: 0 !important;
     width: 250px !important;
     /* Modified background color */
-    background-color: #181818 !important;
-    /* Added border to right side */
-    border-right: 1px solid #3B3B3B !important;
+    background-color: transparent !important;
     /* Move drawer behind header */
     z-index: 998 !important;
 }
@@ -27,10 +28,15 @@
 .layout-mobile .mainDrawer-scrollContainer {
     margin-top: 20px !important;
 }
+
 /* Shift content to the right */
-.layout-desktop .libraryPage:not(#quickConnectPreferencesPage, #editItemMetadataPage) {
+/*.layout-desktop .libraryPage:not(#quickConnectPreferencesPage, #editItemMetadataPage) {
+    margin-left: 250px !important;
+}*/
+.layout-desktop .libraryPage:not(#editItemMetadataPage) {
     margin-left: 250px !important;
 }
+
 /* Hide transition on page load */
 .layout-desktop .touch-menu-la.transition {
     transition: none !important;
@@ -127,15 +133,7 @@
 .navMenuOption-selected {
     background: rgba(33, 149, 243, 0.2) !important;
     color: rgb(33, 149, 243) !important;
-}
-
-
-
-/* Modified background color */
-.backgroundContainer,
-.dialog,
-html {
-    background-color: #0F0F0F !important;
+    backdrop-filter: blur(50px) !important;
 }
 
 
@@ -184,31 +182,6 @@ html {
 }
 .layout-mobile .emby-button-foreground {
     top: -2px !important;
-}
-
-
-
-/* Player modifications */
-.upNextContainer, .toastVisible, .sliderBubble {
-    backdrop-filter: blur(50px) !important;
-}
-.upNextContainer {
-    border-radius: 15px !important;
-    background-color: rgba(0, 0, 0, 0.7) !important;
-}
-.toastVisible {
-    border-radius: 30px !important;
-    background-color: rgba(35, 35, 35, 0.5) !important;
-}
-.sliderBubble {
-    border-radius: 15px !important;
-    background-color: rgba(0,0,0,0.5) !important;
-    height: 55px !important
-}
-/* Support for Jellyscrub plugin */
-.chapterThumbContainer {
-    margin-bottom: 135px !important;
-    border-radius: 15px !important;
 }
 
 
@@ -262,13 +235,19 @@ html {
 
 
 /* Metadata editor fixes */
-.editPageSidebar {
+/*.editPageSidebar {
+    margin-left: 250px !important;
+    width: 20% !important;
+} */
+
+.editPageSidebar:not(.editPageSidebar) {
     margin-left: 250px !important;
     width: 20% !important;
 }
-.layout-desktop #editItemMetadataPage {
+
+/*.layout-desktop #editItemMetadataPage {
     margin-left: 215px !important;
-}
+}*/
 .jstree-default-large .jstree-node {
     line-height: 35px !important;
 }
@@ -292,22 +271,22 @@ html {
 
 /* Remove show/movie image on details page */
 .layout-desktop .detailImageContainer {
-    display: none !important;
+    /*display: none !important;*/
 }
 
 /* Re-position content on details page */
 .layout-desktop .detailSection {
-    margin-right: 0 !important;
+    /*margin-right: 0 !important;*/
 }
 .layout-desktop .detailPageContent {
-    padding-left: 4% !important;
+    /*padding-left: 4% !important;*/
 }
 
 /* Re-position logo */
 .layout-desktop .detailLogo {
-    right: 0 !important;
+    /*right: 0 !important;
     left: 4% !important;
-    top: 14vh !important;
+    top: 14vh !important;*/
 }
 
 /* Transparent ribbon bar */
@@ -316,19 +295,24 @@ html {
 }
 
 /* Add card around top-right buttons */
-.mainDetailButtons {
+.layout-desktop .mainDetailButtons {
     background: rgba(35, 35, 35, 0.5) !important;
     border-radius: 100px !important;
     backdrop-filter: blur(10px) !important;
 }
+.layout-mobile .mainDetailButtons {
+    background: #181818 !important;
+    border-radius: 100px !important;
+}
 
 /* Add card around groups section */
 .layout-desktop .detailsGroupItem {
-    background: #181818 !important;
+    background: rgba(35, 35, 35, 0.5) !important;
     padding: 10px 20px !important;
     border-radius: 100px !important;
     width: fit-content !important;
     max-width: max-content !important;
+    backdrop-filter: blur(40px) !important;
 }
 
 /* Fix for groups section card */
@@ -346,10 +330,11 @@ html {
 
 /* Add card around description */
 .layout-desktop .detailSectionContent {
-    background: #181818 !important;
+    background: rgba(35, 35, 35, 0.5) !important;
     border-radius: 15px !important;
     padding: 40px 20px 10px 20px !important;
     margin-top: 50px !important;
+    backdrop-filter: blur(40px) !important;
 }
 .layout-mobile .detailSectionContent {
     background: #181818 !important;
@@ -358,7 +343,14 @@ html {
 }
 
 /* Add card around track selection */
-.trackSelections {
+.layout-desktop .trackSelections {
+    background: rgba(35, 35, 35, 0.5) !important;
+    border-radius: 15px !important;
+    padding: 10px 20px !important;
+    margin-top: 20px !important;
+    backdrop-filter: blur(40px) !important;
+}
+.layout-mobile .trackSelections {
     background: #181818 !important;
     border-radius: 15px !important;
     padding: 10px 20px !important;
@@ -373,8 +365,9 @@ html {
     padding-left: 4% !important;
 }
 .layout-desktop .nameContainer {
-    position: absolute !important;
+    /*position: absolute !important;*/
     margin-top: -55px !important;
+    margin-left: 20px !important;
 }
 .layout-desktop .itemMiscInfo {
     position: absolute !important;
@@ -411,6 +404,13 @@ html {
     -moz-box-ordinal-group: 4;
     box-ordinal-group: 4;
 }
+/* Fix for backdrops */
+.layout-desktop #itemBackdrop {
+    /*display: none !important;*/
+}
+.layout-desktop .detailPageWrapperContainer {
+    padding-top: 20% !important;
+}
 /* Move episode title */
 .layout-desktop .nameContainer {
     display: -webkit-box;
@@ -429,7 +429,7 @@ html {
     -webkit-box-ordinal-group: 2;
     -moz-box-ordinal-group: 2;
     box-ordinal-group: 2;
-    margin: 0.45em 0 0 0 !important;
+    /*margin: 0.45em 0 0 0 !important;*/
 }
 
 
@@ -438,6 +438,11 @@ html {
 /* Modified background color of active guide cells */
 .programCell-active {
     background: #181818 !important;
+}
+/* Translucent buttons */
+.raised.emby-button:not(.button-submit) {
+    background: rgba(35, 35, 35, 0.5) !important;
+    backdrop-filter: blur(40px) !important;
 }
 /* Repositioned record button */
 .recordingFields {
@@ -452,6 +457,31 @@ html {
 /* Remove overlapping text */
 .itemMiscInfo.itemMiscInfo-secondary {
     margin-left: 65px !important;
+}
+
+
+
+/* Player modifications */
+.upNextContainer, .toastVisible, .sliderBubble {
+    backdrop-filter: blur(50px) !important;
+}
+.upNextContainer {
+    border-radius: 15px !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+.toastVisible {
+    border-radius: 30px !important;
+    background-color: rgba(35, 35, 35, 0.5) !important;
+}
+.sliderBubble {
+    border-radius: 15px !important;
+    background-color: rgba(0,0,0,0.5) !important;
+    height: 55px !important
+}
+/* Support for Jellyscrub plugin */
+.chapterThumbContainer {
+    margin-bottom: 135px !important;
+    border-radius: 15px !important;
 }
 
 
@@ -483,3 +513,90 @@ html {
         top: -2px !important;
     }
 }
+#loginPage {
+  background: url('https://soduto.noton.tk/assets/Low%20Poly%20Grid.svg');
+  background-size: cover;
+}
+.emby-button, .checkboxOutline {
+  border-radius: 20em;
+}
+.btnManual, .button-submit {
+  background-color: #07528f !important;
+}
+.btnForgotPassword {
+  background-color: #F56476 !important;
+}
+.btnQuick {
+  background-color: #415A69 !important;
+}
+.button-link {
+  color: #07528f !important;
+}
+.cardContent {
+  border-radius: 2em;
+}
+.cardBox:not(.visualCardBox) .cardPadder {
+  border-radius: 2em;
+}
+.skinHeader.semiTransparent {
+  background-color: rgba(0, 0, 0, 0) !important;
+  min-height: 5em;
+}
+.pageTitle {
+  margin: 0 0 0 1.7em;
+  height: 2em;
+}
+.standalonePage {
+  padding-top: 8em !important;
+}
+.checkboxIcon {
+  color: #fff;
+}
+.emby-checkbox:checked + span + .checkboxOutline {
+  background-color: #07528f!important;
+  border-color: #07528f!important;
+}
+.emby-input, .emby-textarea {
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+}
+.emby-input {
+  padding: 0.7em 1.2em; !important
+}
+.trackSelections .selectContainer .detailTrackSelect {
+  padding: 0 0.7em; !important
+}
+/* Make count indicator icon dark and transparent */
+.countIndicator {
+  background: #07528f;
+}
+.cardOverlayFab-primary {
+  font-size: 60%;
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+.layout-desktop .detailPageWrapperContainer {
+  padding-top: 0% !important;
+}
+.listItemImageButton {
+  font-size: 1em;
+  width: 3.5em;
+  height: 3.5em;
+}
+.layout-desktop .detailImageContainer .card {
+  width: 12vw;
+  top: 50%;
+}
+.layout-desktop .detailPagePrimaryContainer, .layout-desktop .detailPageContent {
+  padding-left: 20% !important;
+}
+.cardImageContainer.emby-button {
+  border-radius: 0 !important;
+}
+
+/* For MAL-Sync */
+/*#malp {
+  margin-block: 2rem;
+  padding-inline: 2rem;
+}*/
